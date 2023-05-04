@@ -3,6 +3,5 @@ export default function Home() {
     <>
       <h1 className=" text-red-600 font-bold text-center">Hello world</h1>
     </>
-  )
-    
+  );
 }
