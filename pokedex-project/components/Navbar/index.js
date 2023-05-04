@@ -6,9 +6,11 @@ import { navigationLinks } from "../../utils/data";
 const Navbar = () => {
   const router = useRouter();
   return (
-    <ul>
+    <ul className=" flex gap-6">
       {navigationLinks.map((link, index) => (
-        <li key={index}><Link href={link.path}>{link.label}</Link></li>
+        <li key={index}>
+          <Link href={link.path}>{link.label}</Link>
+        </li>
       ))}
     </ul>
   );
