@@ -4,7 +4,7 @@ import Navbar from "../Navbar";
 const Layout = ({ children }) => {
   return (
     <>
-      <header className=" h-1/5 bg-slate-400 flex flex-col py-7 items-center justify-between">
+      <header className=" h-1/5 bg-slate-400 flex flex-col py-4 items-center justify-between">
         <p>LOGO DE POKEMON</p>
         <Navbar />
       </header>
