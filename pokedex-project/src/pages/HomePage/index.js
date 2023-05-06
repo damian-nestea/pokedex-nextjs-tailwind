@@ -1,16 +1,10 @@
 import React from "react";
-import Image from "next/image";
 
 const HomePage = () => {
   return (
     <>
-      <section className=" py-8 flex flex-col items-center">
-        <Image
-          src={"/../public/img/pokemonBackground.png"}
-          width={1000}
-          height={1000}
-          alt="Pokemon Wallpaper"
-        />
+      <section className=" w-4/5 h-4/5 bg-pokemon-background-home bg-center py-8 flex flex-col items-center">
+        Pokemon
       </section>
     </>
   );
