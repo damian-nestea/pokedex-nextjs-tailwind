@@ -13,9 +13,12 @@ const Navbar = () => {
   };
 
   return (
-    <ul className=" flex gap-36 px-8 py-4 uppercase">
+    <ul className=" flex justify-evenly px-8 py-4 uppercase text-xl text-metal-color font-bold">
       {navigationLinks.map((link, index) => (
-        <li className={verifyPath(link.path) && " text-red-600"} key={index}>
+        <li
+          className={verifyPath(link.path) && " text-intense-red"}
+          key={index}
+        >
           <Link href={link.path}>{link.label}</Link>
         </li>
       ))}
