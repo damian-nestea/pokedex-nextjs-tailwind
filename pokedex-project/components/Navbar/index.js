@@ -19,7 +19,10 @@ const Navbar = () => {
           className={verifyPath(link.path) && " text-intense-red"}
           key={index}
         >
-          <Link href={link.path}>{link.label}</Link>
+          <Link className=" group transition duration-300" href={link.path}>
+            {link.label}
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-intense-red"></span>
+          </Link>
         </li>
       ))}
     </ul>
