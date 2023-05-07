@@ -13,10 +13,16 @@ const Navbar = () => {
   };
 
   return (
-    <ul className=" flex gap-36 px-8 py-4 uppercase">
+    <ul className=" flex justify-evenly px-8 py-4 uppercase text-xl text-metal-color font-bold">
       {navigationLinks.map((link, index) => (
-        <li className={verifyPath(link.path) && " text-red-600"} key={index}>
-          <Link href={link.path}>{link.label}</Link>
+        <li
+          className={verifyPath(link.path) && " text-intense-red"}
+          key={index}
+        >
+          <Link className=" group transition duration-300" href={link.path}>
+            {link.label}
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-intense-red"></span>
+          </Link>
         </li>
       ))}
     </ul>

@@ -7,8 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        "intense-red": "#F23E2D",
+      },
       backgroundImage: {
         "pokemon-background-home": "url('/img/pokemonBackground.png')",
+      },
+      colors: {
+        "intense-red": "#F23E2D",
+        "metal-color": "#59595B",
       },
     },
   },
