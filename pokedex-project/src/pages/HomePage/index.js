@@ -18,6 +18,7 @@ const HomePage = () => {
       </section>
       <section className=" mt-5 flex flex-col items-center">
         <h2 className=" text-2xl uppercase font-bold text-dark-metal-color">A maneira mais divertida de conhecer os Pokemons!</h2>
+        <div className=" h-50vh w-4/5 bg-red-300"></div>
       </section>
     </>
   );
