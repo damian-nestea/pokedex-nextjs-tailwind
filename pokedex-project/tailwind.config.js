@@ -16,6 +16,8 @@ module.exports = {
       colors: {
         "intense-red": "#F23E2D",
         "metal-color": "#59595B",
+        "dark-metal-color": "#29292B",
+
       },
     },
   },

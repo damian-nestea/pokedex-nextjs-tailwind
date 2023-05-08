@@ -16,6 +16,9 @@ const HomePage = () => {
           </button>
         </div>
       </section>
+      <section className=" mt-5 flex flex-col items-center">
+        <h2 className=" text-2xl uppercase font-bold text-dark-metal-color">A maneira mais divertida de conhecer os Pokemons!</h2>
+      </section>
     </>
   );
 };
