@@ -16,7 +16,7 @@ const Navbar = () => {
     <ul className=" flex justify-evenly px-8 py-4 uppercase text-xl text-metal-color font-bold">
       {navigationLinks.map((link, index) => (
         <li
-          className={verifyPath(link.path) && " text-intense-red"}
+          className={verifyPath(link.path) ? " text-intense-red" : " text-metal-color"}
           key={index}
         >
           <Link className=" group transition duration-300" href={link.path}>
