@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        "50vh": "50vh",
+        "60vh": "60vh",
       },
       backgroundColor: {
         "intense-red": "#F23E2D",

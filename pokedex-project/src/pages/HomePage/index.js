@@ -1,6 +1,11 @@
-import React from "react";
+import { GlobalContext } from "@/contexts/GlobalContext";
+import React, { useContext } from "react";
 
 const HomePage = () => {
+  const context = useContext(GlobalContext);
+  const { pokemonList } = context;
+
+  console.log(pokemonList);
   return (
     <>
       <section className=" w-full flex flex-col items-center">
@@ -17,8 +22,10 @@ const HomePage = () => {
         </div>
       </section>
       <section className=" mt-5 flex flex-col items-center">
-        <h2 className=" text-2xl uppercase font-bold text-dark-metal-color">A maneira mais divertida de conhecer os Pokemons!</h2>
-        <div className=" h-50vh w-4/5 bg-red-300"></div>
+        <h2 className=" text-2xl uppercase font-bold text-dark-metal-color">
+          A maneira mais divertida de conhecer os Pokemons!
+        </h2>
+        <div className=" h-60vh w-4/5 bg-red-300"></div>
       </section>
     </>
   );
