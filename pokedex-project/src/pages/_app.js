@@ -12,23 +12,3 @@ export default function App({ Component, pageProps }) {
     </GlobalState>
   );
 }
-
-export const getStaticProps = async () => {
-  console.log("Aqui")
-  try {
-    const res = await fetch(BASE_URL);
-    const pokemons = await res.json();
-
-    return {
-      props: {
-        pokemons,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        error: error,
-      },
-    };
-  }
-};
