@@ -1,11 +1,26 @@
+import { BASE_URL } from "@/constants/url";
 import { GlobalContext } from "@/contexts/GlobalContext";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
-const HomePage = () => {
+const HomePage = ({ pokemons }) => {
   const context = useContext(GlobalContext);
   const { pokemonList } = context;
 
-  console.log(pokemonList);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const res = await fetch(BASE_URL);
+      const data = await res.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log(pokemons);
   return (
     <>
       <section className=" w-full flex flex-col items-center">
@@ -30,5 +45,25 @@ const HomePage = () => {
     </>
   );
 };
+
+/* export const getStaticProps = async () => {
+  console.log("Aqui");
+  try {
+    const res = await fetch(BASE_URL);
+    const pokemons = await res.json();
+
+    return {
+      props: {
+        pokemons,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        error: error,
+      },
+    };
+  }
+}; */
 
 export default HomePage;
