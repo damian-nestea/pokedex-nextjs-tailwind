@@ -5,9 +5,7 @@ const PokemonCard = ({ pokemon }) => {
   console.log(pokemon);
   return (
     <article className=" flex flex-col gap-8">
-      <div>
-        <Image />
-      </div>
+      <div>{pokemon.name}</div>
     </article>
   );
 };

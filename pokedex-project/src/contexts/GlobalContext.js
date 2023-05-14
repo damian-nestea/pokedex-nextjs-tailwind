@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from "react";
 export const GlobalContext = createContext();
 
 export const GlobalState = ({ children }) => {
-  const [pokemonList, setPokemonList] = useState({});
+  const [pokemonList, setPokemonList] = useState([]);
 
   useEffect(() => {
     fetchData();
