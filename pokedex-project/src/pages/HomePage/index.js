@@ -1,11 +1,11 @@
 import { GlobalContext } from "@/contexts/GlobalContext";
 import React, { useContext } from "react";
+import PokemonCard from "../../../components/PokemonCard";
 
 const HomePage = () => {
   const context = useContext(GlobalContext);
   const { pokemonList } = context;
 
-  console.log(pokemonList);
   return (
     <>
       <section className=" w-full flex flex-col items-center">
@@ -25,7 +25,11 @@ const HomePage = () => {
         <h2 className=" text-2xl uppercase font-bold text-dark-metal-color">
           A maneira mais divertida de conhecer os Pokemons!
         </h2>
-        <div className=" h-60vh w-4/5 bg-red-300"></div>
+        <div className=" h-60vh w-4/5 bg-red-300">
+          {/* {pokemonList.map((pokemon, index) => (
+            <PokemonCard key={index} pokemon={pokemon} />
+          ))} */}
+        </div>
       </section>
     </>
   );

@@ -14,7 +14,14 @@ export const GlobalState = ({ children }) => {
     try {
       const res = await fetch(BASE_URL);
       const data = await res.json();
-      setPokemonList(data.results);
+
+      const promises = data.results.map(async (pokemon) => {
+        const res = await fetch(pokemon.url);
+        const data = await res.json();
+        return data;
+      });
+      const fetchResult = await Promise.all(promises);
+      setPokemonList(fetchResult);
     } catch (error) {
       console.log(error);
     }
