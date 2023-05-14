@@ -1,6 +1,5 @@
-import { BASE_URL } from "@/constants/url";
 import { GlobalContext } from "@/contexts/GlobalContext";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 const HomePage = () => {
   const context = useContext(GlobalContext);
